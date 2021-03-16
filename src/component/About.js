@@ -7,7 +7,7 @@ const About = () => {
         <Fragment>
             <p>About nous:     </p>   
             <p>Nous sommes Lorem ipsum dolor sit.</p>
-        </Fragment>   
+        </Fragment>     
     );
 }
 
