@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react'; 
+import { Link } from 'react-router-dom'; 
 
 
 const Navbar = () => {
     const [width, setWidth] = useState(window.innerWidth);
     //const divCol = document.querySelector("div.collapse"); 
-    const [menuOpen, setMenuOpen] = useState(false); 
+    const [menuOpen, setMenuOpen] = useState(true); 
 
     const checkSize = () => {
         let sizeW = window.innerWidth;
@@ -32,9 +33,15 @@ const Navbar = () => {
             <a href="###" onClick={(e) => toggleMenu(e) }><i className="fas fa-bars"></i></a> 
             <div className={`collapse ${menuOpen ? 'dblock' : 'dnone'}`}>
                 <ul>
-                    <li><a href="###">Lorem 1</a></li>
-                    <li><a href="###">Lorem 2</a></li>   
-                    <li><a href="###">Lorem 3</a></li>
+                    <li>
+                        <Link to="/">Accueil</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>   
+                    <li>
+                        <Link to="/shop">Shop</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
